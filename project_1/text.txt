@@ -1,0 +1,9 @@
+CICLO DE VIDA DE LARAVEL
+
+# Se Cargan todas las clases de php, en el la carpeta vendor.
+# Luego de eso enciende nuestro Framework, se enciende laravel.
+# Comienza el sistema a aceptar cualquier solicitud.
+# Luego comieza a leer lo q nosotros programamos.
+
+
+# Todo projecto en laravel comienza con el tema de las rutas.
