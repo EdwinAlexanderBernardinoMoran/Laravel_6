@@ -12,3 +12,14 @@ CICLO DE VIDA DE LARAVEL
 COMANDO PARA CREAR USUARIOS FALSOS.
 # php artisan tinker.
 # User::factory()->count(12)->create()
+
+
+FUNDAMENTO DE LARAVEL
+
+# Rutas: Es la capa que se encarga de manejar nuestra aplicación.
+# Controller: Permite Agrupar Logica.
+
+LOS MIDDLEWARES.
+
+# Se encuentran en la carpeta Middleware, se encargan de hacer filtrados de peticiones HTTP en un sistema, es una capa de lógica adicional de filtrado.
+# Para acceder a un Middleware despues de la ruta ponomos: { middleware('nombre')}, este nombre sale del archivo APP\HTTP\ en el archivo Kernel.

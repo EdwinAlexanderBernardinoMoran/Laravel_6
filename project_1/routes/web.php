@@ -14,6 +14,6 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', [UserController::class, 'index'])->name('user.index');
+Route::get('/', [UserController::class, 'index'])->name('user.index')->middleware('auth');
 Route::post('users', [UserController::class, 'store'])->name('user.store');
 Route::delete('users/{user}', [UserController::class, 'destroy'])->name('user.destroy');
