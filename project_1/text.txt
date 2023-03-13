@@ -7,3 +7,8 @@ CICLO DE VIDA DE LARAVEL
 
 
 # Todo projecto en laravel comienza con el tema de las rutas.
+
+
+COMANDO PARA CREAR USUARIOS FALSOS.
+# php artisan tinker.
+# User::factory()->count(12)->create()
