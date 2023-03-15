@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +32,34 @@ Route::get('eloquent', function(){
 
     foreach ($posts as $post) {
         echo "$post->id $post->title <br>";
+    }
+});
+
+
+Route::get('posts', function(){
+
+    $posts = Post::get();
+    // Cuando se usan varios niveles se encierran bajo llaves.
+
+    foreach ($posts as $post) {
+        echo "
+        $post->id
+
+        <strong>{$post->user->name}</strong>
+        $post->title <br>";
+    }
+});
+
+Route::get('users', function(){
+
+    $users = User::get();
+    // Cuando se usan varios niveles se encierran bajo llaves.
+
+    foreach ($users as $user) {
+        echo "
+        $user->id
+
+        <strong>{$user->name}</strong>
+        {$user->posts->count()} posts <br>";
     }
 });

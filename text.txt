@@ -42,3 +42,22 @@ orderBy('id', 'desc') = Esta funcion sirve para listar los archivos de la base d
 get() = Este metodo funciona para obtener datos.
 take(3) = Permite obtener un numero determinado de elementos.
 all() = Este metodo funciona para traer todos los datos.
+
+
+ELOQUENT (RELACION DE TABLAS)
+
+# Relación de Tablas Unir datos colecciones y serialización Manipular la información, Formato de datos y presentación, Formato de datos.
+# Para configurar datos falsos, primero debemos configurar, las migraciones, luego el seeder creamos cuantos datos necesitemos nosotros , y el factory.
+# En el modelo es especificar que hicimos la relación.
+
+// Un usuario tiene muchos post
+    public function posts(){
+        return $this->hasMany(Post::class);
+    }
+    
+// Un Post pertenece a un usuario.
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+# php artisan migrate:refresh --seed
+
