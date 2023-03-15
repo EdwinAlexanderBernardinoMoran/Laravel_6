@@ -1,0 +1,44 @@
+CICLO DE VIDA DE LARAVEL
+
+# Se Cargan todas las clases de php, en el la carpeta vendor.
+# Luego de eso enciende nuestro Framework, se enciende laravel.
+# Comienza el sistema a aceptar cualquier solicitud.
+# Luego comieza a leer lo q nosotros programamos.
+
+
+# Todo projecto en laravel comienza con el tema de las rutas.
+
+
+COMANDO PARA CREAR USUARIOS FALSOS.
+# php artisan tinker.
+# User::factory()->count(12)->create()
+
+
+FUNDAMENTO DE LARAVEL
+
+# Rutas: Es la capa que se encarga de manejar nuestra aplicación.
+# Controller: Permite Agrupar Logica.
+
+LOS MIDDLEWARES.
+
+# Se encuentran en la carpeta Middleware, se encargan de hacer filtrados de peticiones HTTP en un sistema, es una capa de lógica adicional de filtrado.
+# Para acceder a un Middleware despues de la ruta ponomos: { middleware('nombre')}, este nombre sale del archivo APP\HTTP\ en el archivo Kernel.
+
+
+BLADE ES UN SISTEMA DE PLANTILAS.
+
+TRABAJANDO CON EL COMPONENTE DE LARAVEL UI.
+
+# composer require laravel/ui --dev
+# php artisan ui:auth ó php artisan ui bootstrap --auth ó php artisan ui vue --authó php artisan ui react --auth.
+
+
+QUE ELOQUENT:
+# Simple forma de trabajar con Bases De Datos. Usar Bases De Datos en Laravel sin escribir SQL.
+# Cuando Creas un modelo hazlo en singular, es una convencion q debemos respetar, debe ser en ingles y en singular, eso ayuda q la tabla se cree en plural.
+
+where('id', '=>', '20') = Esta funcion sirve para comparar dicha condicion.
+orderBy('id', 'desc') = Esta funcion sirve para listar los archivos de la base de datos, dependiendo como tu lo quieras.
+get() = Este metodo funciona para obtener datos.
+take(3) = Permite obtener un numero determinado de elementos.
+all() = Este metodo funciona para traer todos los datos.
