@@ -42,9 +42,10 @@ Route::get('posts', function(){
     // Cuando se usan varios niveles se encierran bajo llaves.
 
     foreach ($posts as $post) {
+
+        // El metodo user viene del modelo Post
         echo "
         $post->id
-
         <strong>{$post->user->name}</strong>
         $post->title <br>";
     }
@@ -62,4 +63,27 @@ Route::get('users', function(){
         <strong>{$user->name}</strong>
         {$user->posts->count()} posts <br>";
     }
+});
+
+Route::get('collections', function(){
+
+    $users = User::all();
+
+    // Lo que realmente viene en el sucede por detras
+    // dd($users);
+
+    // Lo usamos para verificar si existe dicho elemento, en este caso el elemeto n°4
+    // dd($users->contains(9));
+
+    // Quiero que me traigas todos los elementos excepto el 1,2 y 3
+    // dd($users->except([1,2,3]));
+
+    // Quiero que me traigas solo el elemento 4.
+    // dd($users->only(4));
+
+    // Quiero que me busques el elemento n°4
+    // dd($users->find(4));
+
+    // Este metodo sirve para realizar la carga de pors utilizando la carga del modelo port, con la palabra clave que pusimos en el modelo de POST, al momenton de relacionarlo, imprime todos los posts que tiene cada usuario.
+    dd($users->load('posts'));
 });
