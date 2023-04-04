@@ -46,4 +46,18 @@ class User extends Authenticatable
     public function posts(){
         return $this->hasMany(Post::class);
     }
+
+    // Esta funcion sirve para alterar la informacion de manera visual en pantalla.
+    // Convierte todos los nombres de los usuarios en letras mayusculas.
+    public function getGetNameAttribute()
+    {
+        return strtoupper($this->name);
+    }
+
+    // Cuando queramos salvar dentro del campo name se activara este metodo.
+    // Todo se convertira en minuscula
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = strtolower($value);
+    }
 }

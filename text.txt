@@ -79,3 +79,7 @@ ELOQUENT (RELACION DE TABLAS)
 COLECCIONES.
 
 Son un conjunto de datos con mucha informacion, laravel proporciona metodos muy interesantes para trabajar con cada una de estas colecciones. Es la forma de trabajar para manipular facilmente nuestros datos.
+
+SERIALIZACIOM:
+
+Es manipular los datos devolviendolos en array o json.
