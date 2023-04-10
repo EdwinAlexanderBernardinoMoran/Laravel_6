@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use App\Models\Post;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,6 +22,6 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('123456'),
         ]);
 
-        User::factory()->count(24)->create();
+        Post::factory()->count(24)->create();
     }
 }
