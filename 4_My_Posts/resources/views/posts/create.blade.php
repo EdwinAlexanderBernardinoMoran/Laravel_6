@@ -18,7 +18,7 @@
                         @csrf
                         <div class="form-group mb-4">
                             <label for="titulo">Titulo *</label>
-                            <input type="text" name="titulo" class="form-control" id="titulo" required>
+                            <input type="text" name="title" class="form-control" id="titulo" required>
                         </div>
                         <div class="form-group mb-4">
                             <label for="titulo">Image *</label>
